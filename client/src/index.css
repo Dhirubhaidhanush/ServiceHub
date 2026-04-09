@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --color-background: 0 0% 100%; /* White */
+  --color-foreground: 220 10% 10%; /* Very dark gray/blue */
+  
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 220 10% 10%;
+  
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 220 10% 10%;
+  
+  /* Green accents */
+  --color-primary: 142 71% 45%; /* A nice vibrant green */
+  --color-primary-foreground: 0 0% 100%;
+  
+  --color-secondary: 142 20% 95%; /* Light green background */
+  --color-secondary-foreground: 142 71% 35%; /* Darker green text */
+  
+  --color-muted: 220 10% 96%;
+  --color-muted-foreground: 220 10% 40%;
+  
+  --color-accent: 142 71% 45%;
+  --color-accent-foreground: 0 0% 100%;
+  
+  --color-destructive: 0 84% 60%;
+  --color-destructive-foreground: 0 0% 100%;
+  
+  --color-border: 220 10% 90%;
+  --color-input: 220 10% 90%;
+  --color-ring: 142 71% 45%;
+  
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-[hsl(var(--color-background))] text-[hsl(var(--color-foreground))];
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}

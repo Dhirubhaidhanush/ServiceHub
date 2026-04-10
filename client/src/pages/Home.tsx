@@ -175,6 +175,10 @@ export default function Home() {
                 Chhattisgarh
               </div>
 
+               <div onClick={() => { setSelectedState("West Bengal"); setIsOpen(false); }} className="px-4 py-2 hover:bg-green-50 cursor-pointer">
+                West Bengal
+              </div>
+
             </div>
           )}
         </div>
